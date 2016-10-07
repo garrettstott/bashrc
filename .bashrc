@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 force_color_prompt=yes
+
+alias be='bundle exec'
+alias dcms='bundle exec rake db:drop db:create db:migrate db:seed'
 alias ls='ls --color=auto'
 
 # >>>>BEGIN ADDED BY CNCHI INSTALLER<<<< #
@@ -27,7 +30,8 @@ PS1="\[\033]0;\w\007\]";
 PS1+="\[${yellow}\]\u "; # username
 PS1+="\[${cyan}\]\w"; # working directory
 PS1+="\[${green}\]\$(__git_ps1)"
-PS1+="\[${white}\]\\n-> \[${reset}\]"; # `$` (and reset color)
+PS1+="\[${white}\]\\n$ \[${reset}\]"; # `$` (and reset color)
 export PS1;
 
-# PS1="\[$BLUE\]\u\[$YELLOW\]\[$YELLOW\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$WHITE\]\\n-> "
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+source /home/garrettstott/.rvm/scripts/rvm
