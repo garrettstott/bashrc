@@ -12,11 +12,20 @@ alias be='bundle exec'
 alias dcms='bundle exec rake db:drop db:create db:migrate db:seed'
 alias ls='ls --color=auto'
 
-export CHROME=google-chrome
+export CHROME=/usr/bin/google-chrome
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 
-# Load in the git branch prompt script.
+# Performance
+export TWILIO_ACCOUNT_SID="AC75f2733a4641cf0a183ed2ff71170e18"
+export TWILIO_AUTH_TOKEN="943a5fb6420858662ecaf2d9e229b0ca"
+export TWILIO_PHONE_NUMBER="+1 385-236-0336"
+export FACEBOOK_APP_ID='715043772002353'
+export FACEBOOK_APP_SECRET='6965e29141434f4219cf2a2e8d43a3d2'
+export GOOGLE_OAUTH_CLIENT_ID='387130618366-62c48sbhhtvg18149fc0693ikptgi6ou.apps.googleusercontent.com'
+export GOOGLE_OAUTH_CLIENT_SECRET='Qve7b0vEWSD6Dc4GaxgvkB1u'
+
+#Load in the git branch prompt script.
 source ~/.git-prompt.sh
 
 reset="\033[0m";
